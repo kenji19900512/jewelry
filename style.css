@@ -1,0 +1,435 @@
+@charset "UTF-8";
+
+:root {
+    --base-color: #fff;
+    --main-color: #020826;
+    --sub-color: #8c7851;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: var(--main-color);
+    font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'Didot', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', 'Cambria', 'Baskerville', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+/* mainとfooterのコンテンツ幅を設定 */
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.site-title {
+    line-height: 1px;
+}
+
+.site-title a {
+    display: block;
+    font-weight: normal;
+    font-size: 2.45rem;
+    font-family: 'Savoye LET', sans-serif;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+/*
+widthをvwで指定することで、画面幅を基準にした横幅になる
+*/
+#mainvisual {
+    width: 100%;
+    margin: 2% auto 0 auto;
+    position: relative;
+}
+
+#mainvisual img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+/*-------------------------------------------
+Header
+-------------------------------------------*/
+.header__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+}
+
+
+#header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header li {
+    font-size: 0.875rem;
+    margin-left: 20px;
+}
+
+
+/*
+最後のliタグには margin-right を設定しない
+*/
+#header li:last-child {
+    margin-right: 0;
+}
+
+/* SNSアイコン */
+
+.sns {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.twitter {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(./twitter.png);
+    background-size: contain;
+    margin-bottom: 10px;
+}
+
+.instagram {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(./instagram.png);
+    background-size: contain;
+}
+
+/*-------------------------------------------
+Content、About
+-------------------------------------------*/
+.content {
+    width: 70%;
+    text-align: left;
+    margin-left: 30%;
+    margin-bottom: 120px;
+}
+
+.content .img {
+    width: 100%;
+    margin-right: 0;
+}
+
+.content .img img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.content .text {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.content .text h2 {
+    padding: 10px;
+}
+
+.content .text p {
+    padding: 10px;
+}
+
+.right {
+    margin-right: 30%;
+    margin-left: 0;
+}
+
+.fadeIn {
+    animation-name: fadeAnime;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeInTrigger {
+    opacity: 0;
+}
+
+/*-------------------------------------------
+link
+-------------------------------------------*/
+
+.link__img {
+    position: relative;
+}
+
+.box1 {
+    margin-bottom: 20px;
+}
+
+.box2 {
+    margin-bottom: 120px;
+}
+
+.link__img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.link__img .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.link__img .text h2 {
+    padding: 10px;
+}
+
+.link__img .text p {
+    padding: 10px;
+}
+
+
+/*-------------------------------------------
+gallery
+-------------------------------------------*/
+
+#gallery h2 {
+    margin-bottom: 40px;
+}
+
+#gallery ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#gallery ul li {
+    width: calc((100% / 2) - 2%);
+    margin-bottom: 40px;
+}
+
+#gallery ul li .img img {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+#gallery ul li .text {
+    width: 100%;
+    padding: 20px;
+}
+
+#gallery ul li .text h3 {
+    margin-bottom: 20px;
+}
+
+/*-------------------------------------------
+link2
+-------------------------------------------*/
+
+.link__box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 320px;
+}
+
+.link__box-img {
+    width: 50%;
+    position: relative;
+}
+
+.link__box-img:first-child {
+    margin-right: 5px;
+}
+
+.link__box-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.link__box-img .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+/*-------------------------------------------
+Footer
+-------------------------------------------*/
+#footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 900px) {
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    /*-------------------------------------------
+Header
+-------------------------------------------*/
+    .header__inner {
+        padding: 32px 4%;
+    }
+
+    /*-------------------------------------------
+  Mainvisual
+  -------------------------------------------*/
+    #mainvisual {
+        width: 100%;
+        margin: 0;
+    }
+
+    /*
+  heightをvhで指定することで、画面の高さを基準にした高さになる
+  */
+    #mainvisual img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    /*-------------------------------------------
+Content、About
+-------------------------------------------*/
+    .content {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 60px;
+    }
+
+    .content .img img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .content .text {
+        width: 100%;
+    }
+
+
+
+    /*-------------------------------------------
+link
+-------------------------------------------*/
+
+    .box2 {
+        margin-bottom: 60px;
+    }
+
+
+    .link__img img {
+        height: 200px;
+    }
+
+    /*-------------------------------------------
+gallery
+-------------------------------------------*/
+
+    #gallery h2 {
+        margin-bottom: 20px;
+    }
+
+    #gallery ul {
+        flex-direction: column;
+    }
+
+    #gallery ul li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #gallery ul li .img img {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    /*-------------------------------------------
+link2
+-------------------------------------------*/
+
+    .link__box {
+        flex-direction: column;
+        margin-bottom: 120px;
+    }
+
+    .link__box-img {
+        width: 100%;
+    }
+
+    .link__box-img:first-child {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .link__box-img img {
+        height: 150px;
+    }
+
+    /*-------------------------------------------
+Footer
+-------------------------------------------*/
+    #footer {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #footer .logo .site-title {
+        display: none;
+    }
+
+    #footer .copy {
+        text-align: left;
+    }
+
+}
